@@ -14,7 +14,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import '../header.scss'
 
-export const Search: FC<{ className: string }> = ({ className }) => {
+export const Search: FC<{ className?: string }> = ({ className }) => {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [searchResults, setSearchResults] = useState<IProduct[] | []>([])
 
