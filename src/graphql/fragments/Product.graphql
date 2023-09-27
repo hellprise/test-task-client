@@ -1,0 +1,13 @@
+fragment productFragment on Product {
+	slug
+	name
+	price
+	image {
+		data {
+			attributes {
+				url
+			}
+		}
+	}
+	updatedAt
+}

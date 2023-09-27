@@ -1,0 +1,11 @@
+@import '@/app/[locale]/styles';
+
+.language-selector {
+  @include flex-items(center);
+  
+  column-gap: $gap-12;
+
+  @media screen and (min-width: 1024px) {
+    margin-left: auto;
+  }
+}

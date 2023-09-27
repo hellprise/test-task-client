@@ -1,0 +1,25 @@
+@import '@/app/[locale]/styles';
+
+.heading {
+  font-size: $text-xl;
+  color: $dark;
+  font-weight: $font-regular;
+  line-height: normal;
+  letter-spacing: 0.07rem;
+
+  > span {
+    font-weight: $font-bold;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: $text-xxl;
+  }
+}

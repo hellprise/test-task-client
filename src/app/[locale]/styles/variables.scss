@@ -1,0 +1,91 @@
+// sizes
+// width
+$w-px: 1px;
+$w-3-4: 75%;
+$w-quarter: 25%;
+$w-third: 33.333333%;
+$w-half: 50%;
+$w-7-12: 58%;
+$w-full: 100%;
+$w-screen: 100vw;
+
+//height
+$h-screen: 100vh;
+$h-full: 100%;
+$h-half: 50%;
+$h-third: 33.333333%;
+$h-quarter: 25%;
+$h-px: 1px;
+$h-bg: 236px;
+
+// paddings
+$p-px: 1px;
+$p-2: 2px;
+$p-6: 6px; 
+$p-8: 8px;
+$p-10: 10px;
+$p-12: 12px;
+$p-14: 14px;
+$p-16: 16px;
+$p-20: 20px;
+$p-24: 24px;
+$p-28: 28px;
+$p-32: 32px;
+$p-36: 36px;
+$p-40: 40px;
+$p-48: 48px;
+$p-50: 50px;
+$p-54: 54px;
+$p-60: 60px;
+$p-80: 80px;
+$p-120: 120px;
+
+// font-sizes
+$text-xxs: 12px;
+$text-xs: 14px;
+$text-s: 16px;
+$text-m: 18px;
+$text-l: 20px;
+$text-xl: 24px;
+$text-xxl: 36px;
+
+// font weight
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// transitions
+$animate-bg: background 0.3s ease-in-out;
+$animate-color: color 0.3s ease-in-out;
+$animate-opacity: opacity 0.3s ease-in-out;
+$animate-transform: transform 0.3s ease-in-out;
+$animate-filter: filter 0.3s ease-in-out;
+$animate-border: border 0.3s ease-in-out;
+$animate-all: all 0.3s ease-in-out;
+
+// border-radius
+$rounded-s: 6px;
+$rounded-m: 8px;
+$rounded-l: 12px;
+$rounded-xl: 20px;
+$rounded-xxl: 36px;
+
+// gap
+$gap-12: 12px;
+$gap-16: 16px;
+$gap-20: 20px;
+$gap-24: 24px;
+$gap-28: 28px;
+$gap-32: 32px;
+$gap-36: 36px;
+$gap-48: 48px;
+$gap-60: 60px;
+$gap-64: 64px;
+
+// box shadow
+$shadow-link: 0px 4px 24px -4px rgba(0, 0, 0, 0.16);
+
+// opacity
+$opacity-0: 0;
+$opacity-1: 1;

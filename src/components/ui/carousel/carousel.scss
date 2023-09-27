@@ -1,0 +1,128 @@
+@import '@/app/[locale]/styles';
+
+.carousel {
+  display: flex;
+  padding-left: $p-12;
+  padding-right: $p-12;
+  padding-bottom: $p-40;
+  column-gap: $gap-12;
+
+  &-item {
+    @include flex-alignment(center, center);
+
+    position: relative;
+
+    height: 480px;
+    border-radius: $rounded-l;
+    cursor: pointer;
+    flex: 1;
+    transition: $animate-all;
+
+    &__mark {
+      .mark__info {
+        transform: scale(0);
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .mark__btn {
+        opacity: $opacity-0;
+        transition: $animate-opacity;
+
+        > button {
+          @media screen and (max-width: 767px) {
+            padding: $p-10;
+            font-size: $text-xxs;
+          }
+        }
+      }
+    }
+
+    & > img {
+      border-radius: $rounded-l;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &__title {
+      position: relative;
+      z-index: 2;
+
+      color: white;
+      font-size: $text-m;
+      font-weight: $font-medium;
+      transform: rotate(180deg);
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+    }
+
+    &--blur {
+      position: absolute;
+      inset: 0px;
+      z-index: 1;
+
+      backdrop-filter: blur(2px);
+      transition: $animate-filter;
+    }
+
+    &--active {
+      flex: 10;
+      border-radius: $rounded-m;
+
+      & > img {
+        // filter: blur(0px);
+        border-radius: $rounded-m;
+      }
+
+      & > .carousel-item__title {
+        display: none;
+      }
+
+      & > .carousel-item--blur {
+        backdrop-filter: blur(0px);
+        display: none;
+      }
+
+      & > .carousel-item__mark {
+        & > .mark__info {
+          transform: scale(1);
+        }
+
+        & > .mark__btn {
+          opacity: $opacity-1;
+        }
+      }
+    }
+  }
+
+  &--not-found {
+    @include not-found;
+  }
+
+  @media screen and (min-width: 1550px) {
+    &-item {
+      height: 600px;
+    }
+  }
+  
+  @media screen and (min-width: 1800px) {
+    &-item {
+      height: 700px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-left: $p-20;
+    padding-right: $p-20;
+  }
+
+  @media screen and (min-width: 1024px) {
+    column-gap: $gap-24;
+    padding: 0 $p-60 $p-80 $p-60;
+
+    &-item {
+      &__title {
+        font-size: $text-xl;
+      }
+    }
+  }
+}

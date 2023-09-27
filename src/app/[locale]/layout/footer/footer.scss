@@ -1,0 +1,148 @@
+@import "@/app/[locale]/styles";
+
+.footer {
+  padding: $p-50 $p-12;
+
+  &-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gap-28;
+    row-gap: $gap-48;
+    margin-bottom: $p-28;
+
+    &__section {
+      @include flex-direction;
+
+      row-gap: $gap-48;
+    }
+
+    &__item {
+      @include flex-direction;
+
+      align-items: start;
+
+      > h3 {
+        color: $text;
+        font-weight: $font-semibold;
+        font-size: $text-m;
+        letter-spacing: 0.05rem;
+
+        margin-bottom: $p-24;
+      }
+
+      > ul {
+        @include flex-direction;
+
+        row-gap: $gap-20;
+
+        > li {
+          font-size: $text-xs;
+          color: $gray;
+          font-weight: $font-medium;
+          letter-spacing: 0.04rem;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    @include flex-direction($direction: column-reverse);
+
+    row-gap: $gap-24;
+    padding-top: $p-24;
+    border-top: 1px solid #d1d1d1;
+
+    > p {
+      color: $text;
+      font-size: $text-xs;
+      letter-spacing: 0.03rem;
+      text-align: center;
+    }
+
+    &__links {
+      @include flex-direction;
+
+      row-gap: $gap-12;
+
+      > li {
+        position: relative;
+        color: $gray;
+        font-weight: $font-medium;
+        letter-spacing: 0.035rem;
+        text-align: center;
+      }
+    }
+
+    &__language {
+      align-self: flex-end;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    &-columns {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: $p-60;
+
+    &-columns {
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: $gap-64;
+      row-gap: 0;
+      margin-bottom: $p-60;
+
+      &__section {
+        row-gap: $gap-60;
+      }
+
+      &__item {
+        align-items: start;
+
+        > ul {
+          row-gap: $gap-32;
+
+          > li {
+            font-size: $text-s;
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      flex-direction: row;
+      row-gap: 0;
+      padding-top: $p-54;
+
+      > p {
+        text-align: left;
+      }
+
+      &__links {
+        flex-direction: row;
+        column-gap: $gap-32;
+        margin-left: $p-48;
+
+        > li {
+          text-align: left;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -16px;
+            width: $w-px;
+            height: calc($h-full + 4px);
+            background-color: #d1d1d1;
+            z-index: 1;
+          }
+
+          &:last-child::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

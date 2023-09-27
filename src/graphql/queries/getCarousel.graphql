@@ -1,0 +1,21 @@
+query getCarousel($locale: I18NLocaleCode) {
+	carousel(locale: $locale) {
+		data {
+			attributes {
+				Slide {
+					id
+					title
+					category
+					slug
+					image {
+						data {
+							attributes {
+								url
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

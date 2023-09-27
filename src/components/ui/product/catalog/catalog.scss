@@ -1,0 +1,23 @@
+@import "@/app/[locale]/styles";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap-24;
+
+  @media screen and (max-width: 639px) {
+    grid-template-columns: auto;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1600px) {
+    gap: $gap-48;
+  }
+}

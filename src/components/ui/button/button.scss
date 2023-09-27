@@ -1,0 +1,100 @@
+@import "@/app/[locale]/styles";
+
+.button {
+  width: fit-content;
+  text-transform: capitalize;
+  font-size: $text-xs;
+  letter-spacing: 0.04rem;
+  cursor: pointer;
+
+  &--blur {
+    padding: $p-12;
+
+    border-radius: $rounded-l;
+    border: 1px solid $gray;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    transition: $animate-transform;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0px;
+      border-radius: $rounded-l;
+      padding: $p-px;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: rotate3d(1, 1, 1, 20deg);
+    }
+  }
+
+  &--dark {
+    padding: $p-14 $p-20;
+
+    color: $light-gray;
+    font-weight: $font-medium;
+
+    background: linear-gradient(to right, $gray 1%, black);
+
+    border-radius: $rounded-l;
+    border: 1px solid #fff;
+    box-shadow: $shadow-link;
+    transition: $animate-transform;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &--transparent {
+    padding-left: $p-12;
+    border-radius: $rounded-s;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  &--has-icon {
+    @include flex-items;
+
+    column-gap: $gap-12;
+
+    > svg {
+      transition: $animate-transform;
+    }
+
+    &:hover > svg {
+      transform: translateX(10px);
+    }
+  }
+
+  > span {
+    display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: $text-s;
+
+    &--dark {
+      padding: $p-14 $p-24;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &--blur {
+      border: none;
+      background: $white-transparent;
+    }
+  }
+}

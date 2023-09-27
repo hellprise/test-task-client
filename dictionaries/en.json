@@ -1,0 +1,185 @@
+{
+	"header": {
+		"home": {
+			"name": "Home"
+		},
+		"products": {
+			"name": "Products",
+			"submenu": {
+				"name1": "Product 1",
+				"name2": "Product 2",
+				"name3": "Product 3",
+				"name4": "Product 4"
+			}
+		},
+		"entertainment": {
+			"name": "Entertainment"
+		},
+		"support": {
+			"name": "Support"
+		}
+	},
+	"hero": {
+		"title": "Elevating Life | to Pro-Level Precision | with Vision Pro",
+		"subtitle": "With Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality — all while staying present in the  world around you",
+		"button": "Pre-order Now"
+	},
+	"sectionByCategory": {
+		"title": "Get Your iPhone",
+		"button": "See all",
+		"product": {
+			"priceFrom": "From",
+			"button": "Details"
+		}
+	},
+	"explorer": {
+		"title": "Explore in <span>Products</span>"
+	},
+	"carousel": {
+		"button": "Stream Now"
+	},
+	"shop_learn": {
+		"title": "Shop & Learn",
+		"items": [
+			{
+				"name": "Store",
+				"slug": "store"
+			},
+			{
+				"name": "Mac",
+				"slug": "mac"
+			},
+			{
+				"name": "iPad",
+				"slug": "ipad"
+			},
+			{
+				"name": "iPhone",
+				"slug": "iphone"
+			},
+			{
+				"name": "Watch",
+				"slug": "watch"
+			},
+			{
+				"name": "Vision",
+				"slug": "vision"
+			},
+			{
+				"name": "AirPods",
+				"slug": "airpods"
+			},
+			{
+				"name": "TV & Home",
+				"slug": "tv"
+			},
+			{
+				"name": "Airtag",
+				"slug": "airtag"
+			},
+			{
+				"name": "Accessories",
+				"slug": "accessories"
+			},
+			{
+				"name": "Gift Cards",
+				"slug": "gift-cards"
+			}
+		]
+	},
+	"footer": {
+		"shop_learn": {
+			"title": "Shop & Learn",
+			"items": {
+				"name1": "Store",
+				"name2": "Mac",
+				"name3": "iPad",
+				"name4": "iPhone",
+				"name5": "Watch",
+				"name6": "Vision",
+				"name7": "AirPods",
+				"name8": "TV & Home",
+				"name9": "Airtag",
+				"name10": "Accessories",
+				"name11": "Gift Cards"
+			}
+		},
+		"apple_store": {
+			"title": "Apple Store",
+			"items": {
+				"name1": "Find a Store",
+				"name2": "Genius Bar",
+				"name3": "Today at Apple",
+				"name4": "Apple Camp",
+				"name5": "Apple Store App",
+				"name6": "Certified Refurbished",
+				"name7": "Apple Trade In",
+				"name8": "Financing",
+				"name9": "Carrier Deals at Apple",
+				"name10": "Order Status",
+				"name11": "Shopping Help"
+			}
+		},
+		"for_business": {
+			"title": "For Business",
+			"items": {
+				"name1": "Apple and Business",
+				"name2": "Shop for Business"
+			}
+		},
+		"for_education": {
+			"title": "For Education",
+			"items": {
+				"name1": "Apple and Education",
+				"name2": "Shop for K-12",
+				"name3": "Shop for College"
+			}
+		},
+		"for_healthcare": {
+			"title": "For Healthcare",
+			"items": {
+				"name1": "Apple in Healthcare",
+				"name2": "Health on Apple Watch",
+				"name3": "Health Records on iPhone"
+			}
+		},
+		"entertainment": {
+			"title": "Entertainment",
+			"items": {
+				"name1": "Apple One",
+				"name2": "Apple TV+",
+				"name3": "Apple Music",
+				"name4": "Apple Arcade",
+				"name5": "Apple Fitness+",
+				"name6": "Apple News+",
+				"name7": "Apple Podcasts",
+				"name8": "Apple Books",
+				"name9": "App Store"
+			}
+		},
+		"apple_wallet": {
+			"title": "Apple Wallet",
+			"items": {
+				"name1": "Wallet",
+				"name2": "Apple Card",
+				"name3": "Apple Pay",
+				"name4": "Apple Cash"
+			}
+		},
+		"account": {
+			"title": "Account",
+			"items": {
+				"name1": "Manage Your Apple ID",
+				"name2": "Apple Store Account",
+				"name3": "iCloud.com"
+			}
+		},
+		"bottomList": {
+			"name1": "Privacy Policy",
+			"name2": "Terms of Use",
+			"name3": "Sales and Refunds",
+			"name4": "Legal",
+			"name5": "Site Map"
+		}
+	}
+}

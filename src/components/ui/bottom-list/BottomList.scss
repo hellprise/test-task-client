@@ -1,0 +1,57 @@
+@import "@/app/[locale]/styles";
+
+.bottom-links {
+  overflow-x: scroll;
+
+  padding: $p-24 $p-12;
+  background: $dark;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > div {
+    @include flex-alignment(center, flex-start, $gap-24);
+
+    min-width: max-content;
+
+    a {
+      padding: $p-10 $p-16;
+
+      color: #f2f2f2;
+      font-size: $text-xs;
+      font-weight: $font-medium;
+      letter-spacing: 0.03rem;
+      text-align: center;
+
+      background: transparent;
+      border-radius: $rounded-xxl;
+      border: 1px solid $gray;
+      box-shadow: $shadow-link;
+      transition: $animate-all;
+
+      &:hover {
+        background: #f2f2f2;
+        color: $dark;
+      }
+    }
+  }
+
+  &--not-found {
+    @include not-found;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: $p-24 $p-60;
+
+    > div {
+      gap: $gap-36;
+
+      > a {
+        padding: $p-14 $p-24;
+
+        font-size: $text-s;
+      }
+    }
+  }
+}

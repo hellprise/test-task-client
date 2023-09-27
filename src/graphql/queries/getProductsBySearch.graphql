@@ -1,0 +1,12 @@
+#import '../fragments/Product.graphql'
+
+query getProductsByCategory($search: String!, $locale: I18NLocaleCode) {
+	products(filters: { name: { startsWith: $search } }, locale: $locale) {
+		data {
+			id
+			attributes {
+				...productFragment
+			}
+		}
+	}
+}

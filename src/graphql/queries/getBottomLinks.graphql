@@ -1,0 +1,15 @@
+query getBottomLinks($locale: I18NLocaleCode) {
+	linksList(locale: $locale) {
+		data {
+			attributes {
+				List {
+					Link {
+						id
+						name
+						slug
+					}
+				}
+			}
+		}
+	}
+}

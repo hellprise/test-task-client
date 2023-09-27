@@ -1,0 +1,136 @@
+{
+	"header": {
+		"home": {
+			"name": "Головна"
+		},
+		"products": {
+			"name": "Продукти",
+			"submenu": {
+				"name1": "Продукт 1",
+				"name2": "Продукт 2",
+				"name3": "Продукт 3",
+				"name4": "Продукт 4"
+			}
+		},
+		"entertainment": {
+			"name": "Сервіси"
+		},
+		"support": {
+			"name": "Підтримка"
+		}
+	},
+	"hero": {
+		"title": "Підвищуємо | точність життя до професійного рівня з | Vision Pro",
+		"subtitle": "З Vision Pro у вас є безмежне полотно, яке змінює те, як ви використовуєте улюблені програми. Розташовуйте програми будь-де та масштабуйте їх до ідеального розміру, перетворюючи робочий простір своєї мрії на реальність - і все це, залишаючись присутнім у навколишньому світі",
+		"button": "Передзамовити зараз"
+	},
+	"sectionByCategory": {
+		"title": "Отримайте свій",
+		"button": "Дивитися все",
+		"product": {
+			"priceFrom": "Від",
+			"button": "Детальніше"
+		}
+	},
+	"explorer": {
+		"title": "Дослідити <span>продукти</span>"
+	},
+	"carousel": {
+		"button": "Дивитися зараз"
+	},
+	"footer": {
+		"shop_learn": {
+			"title": "Покупки та навчання",
+			"items": {
+				"name1": "Магазин",
+				"name2": "Mac",
+				"name3": "iPad",
+				"name4": "iPhone",
+				"name5": "Watch",
+				"name6": "Vision",
+				"name7": "AirPods",
+				"name8": "TV & Дім",
+				"name9": "Airtag",
+				"name10": "Accessories",
+				"name11": "Gift Cards"
+			}
+		},
+		"apple_store": {
+			"title": "Магазин Apple",
+			"items": {
+				"name1": "Знайти магазин",
+				"name2": "Genius Bar",
+				"name3": "Сьогодні в Apple",
+				"name4": "Apple Camp",
+				"name5": "Застосунок Apple Store",
+				"name6": "Certified Refurbished",
+				"name7": "Apple Trade In",
+				"name8": "Фінансування",
+				"name9": "Операторські угоди в Apple",
+				"name10": "Статус замовлення",
+				"name11": "Допомога при покупці"
+			}
+		},
+		"for_business": {
+			"title": "Для бізнесу",
+			"items": {
+				"name1": "Apple та бізнес",
+				"name2": "Магазин для бізнесу"
+			}
+		},
+		"for_education": {
+			"title": "Для освіти",
+			"items": {
+				"name1": "Apple та освіта",
+				"name2": "Магазин для K-12",
+				"name3": "Магазин для коледжу"
+			}
+		},
+		"for_healthcare": {
+			"title": "Для охорони здоров'я",
+			"items": {
+				"name1": "Apple у сфері охорони здоров'я",
+				"name2": "Здоров'я з Apple Watch",
+				"name3": "Медичні записи на iPhone"
+			}
+		},
+		"entertainment": {
+			"title": "Сервіси",
+			"items": {
+				"name1": "Apple One",
+				"name2": "Apple TV+",
+				"name3": "Apple Music",
+				"name4": "Apple Arcade",
+				"name5": "Apple Fitness+",
+				"name6": "Apple News+",
+				"name7": "Apple Podcasts",
+				"name8": "Apple Books",
+				"name9": "App Store"
+			}
+		},
+		"apple_wallet": {
+			"title": "Гаманець Apple",
+			"items": {
+				"name1": "Гаманець",
+				"name2": "Apple Card",
+				"name3": "Apple Pay",
+				"name4": "Apple Cash"
+			}
+		},
+		"account": {
+			"title": "Обліковий запис",
+			"items": {
+				"name1": "Керування Apple ID",
+				"name2": "Apple Store акаунт",
+				"name3": "iCloud.com"
+			}
+		},
+		"bottomList": {
+			"name1": "Політика конфіденційності",
+			"name2": "Умови користування",
+			"name3": "Продажі та відшкодування",
+			"name4": "Юридична інформація",
+			"name5": "Карта сайту"
+		}
+	}
+}

@@ -1,0 +1,178 @@
+@import "@/app/[locale]/styles";
+
+.hero {
+  @include flex-alignment(flex-start, center, 0, column-reverse);
+
+  padding-left: $p-16;
+  padding-right: $p-16;
+
+  &__content {
+    @include flex-direction;
+
+    position: relative;
+    width: $w-full;
+    row-gap: $gap-24;
+    margin-bottom: $p-24;
+    margin-top: $p-24;
+
+    & > p {
+      color: $gray;
+      text-transform: capitalize;
+      line-height: 22px;
+      letter-spacing: 0.027rem;
+    }
+
+    @media screen and (max-width: 639px) {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 767px) {
+      max-width: 428px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      max-width: 530px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1400px) {
+      max-width: 543px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > h1 {
+      @include flex-direction;
+
+      width: fit-content;
+
+      font-size: clamp(26px, 3.33vw, 70px) !important;
+      font-weight: $font-semibold;
+      text-transform: capitalize;
+      line-height: 1.7;
+      letter-spacing: 0.06rem;
+
+      & > span {
+        width: fit-content;
+      }
+
+      & > span:first-child {
+        background: radial-gradient(1662.48% 205.49% at 53.54% -74.56%, $dark 40.24%, #a3a3a3 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      & > span:nth-child(2) {
+        background: radial-gradient(5714.58% 237.89% at 40.8% -64.04%, $dark 28.3%, #a3a3a3 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      & > span:last-child {
+        background: linear-gradient(to right, $dark 85%, #a3a3a3 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        align-self: flex-end;
+      }
+    }
+
+    & > img:first-child {
+      position: absolute;
+      top: 3px;
+      right: -8px;
+
+      width: clamp(121px, 14.65vw, 320px) !important;
+      height: clamp(43px, 5.21vw, 120px) !important;
+    }
+
+    & > img:last-child {
+      position: absolute;
+      bottom: 0;
+      left: -8px;
+
+      width: clamp(97px, 11.75vw, 260px) !important;
+      height: clamp(43px, 5.21vw, 120px) !important;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    &__image img {
+      width: $w-full;
+      height: $h-full;
+    }
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1400px) {
+    &__image {
+      width: 54%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    padding-top: $p-120 !important;
+
+    &__content {
+      width: 60% !important;
+    }
+  }
+
+  @media screen and (min-width: 1279px) and (max-width: 1400px) {
+    &__content {
+      width: 45% !important;
+    }
+
+    &__text {
+      & > h1 {
+        letter-spacing: 0.1rem !important;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 $p-60 $p-80 $p-60;
+
+    &__content {
+      width: 40.9%;
+      row-gap: $gap-36;
+      margin-top: 0;
+    }
+
+    &__text {
+      margin-left: 0;
+      margin-right: 0;
+
+      & > h1 {
+        letter-spacing: 0.14rem;
+      }
+
+      & > img:first-child {
+        position: absolute;
+        top: 8px;
+        right: -8px;
+      }
+
+      & > img:last-child {
+        position: absolute;
+        bottom: 0;
+        left: -8px;
+      }
+    }
+
+    &__button {
+      margin-top: $p-12;
+    }
+  }
+}

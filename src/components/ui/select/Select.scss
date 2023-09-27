@@ -1,0 +1,84 @@
+@import "@/app/[locale]/styles";
+
+.select {
+  position: relative;
+  width: max-content;
+
+  > button {
+    @include flex-items;
+
+    background-color: transparent;
+    border: none;
+    column-gap: $gap-12;
+
+    > p {
+      font-size: $text-s;
+      color: $gray;
+      font-weight: $font-medium;
+      letter-spacing: 0.03rem;
+    }
+  }
+
+  &__icon {
+    transition: $animate-transform;
+  }
+
+  &__icon--active {
+    transform: rotate(180deg);
+  }
+
+  &__options {
+    width: $w-full;
+    display: none;
+
+    position: absolute;
+    z-index: 3;
+    right: 56px;
+    bottom: 18px;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__item {
+    margin-bottom: $p-12;
+    cursor: pointer;
+    display: block;
+    width: $w-full;
+    border-radius: $rounded-l;
+    background-color: white;
+    padding: $p-8 $p-28;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    transition:
+      background-color 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+
+    transform: translateX(50px);
+    opacity: $opacity-0;
+    animation: slideInRight 0.5s forwards;
+
+    &--active {
+      text-decoration: underline;
+    }
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.1s * $i;
+      }
+    }
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: $opacity-0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: $opacity-1;
+  }
+}
