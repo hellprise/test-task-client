@@ -8,7 +8,21 @@ npm install
 yarn install
 ```
 
-Next, run the development server:
+For the project to run, you also need to download another repository to your device, with Strapi as the backend.
+To do this, [follow the link](https://github.com/hellprise/test-task-strapi) , install the dependencies, and enable the local server (need .env file and authenticate):
+
+```bash
+npm install
+# or
+yarn install
+```
+```bash
+npm run develop
+# or
+yarn develop
+```
+
+Next, run the development server (need env file):
 
 ```bash
 npm run dev
