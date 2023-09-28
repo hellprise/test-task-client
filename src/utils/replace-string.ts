@@ -1,5 +1,5 @@
 export const replaceString = (str: string, symbol: string = ' | '): string[] => {
-  const strArr = str.split(symbol)
+	const strArr = str.split(symbol)
 
-  return strArr
+	return strArr
 }

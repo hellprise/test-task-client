@@ -1,48 +1,48 @@
-@import "@/app/[locale]/styles";
+@import '@/app/[locale]/styles';
 
 .list {
-  &-wrapper {
-    position: relative;
-    padding: $p-40 $p-12 $p-60 $p-12;
+	&-wrapper {
+		position: relative;
+		padding: $p-40 $p-12 $p-60 $p-12;
 
-    > img {
-      height: $h-bg !important;
-      z-index: -1;
-    }
-  }
+		> img {
+			height: $h-bg !important;
+			z-index: -1;
+		}
+	}
 
-  &-header {
-    @include flex-alignment(space-between, center);
+	&-header {
+		@include flex-alignment(space-between, center);
 
-    margin-bottom: $p-36;
-  }
+		margin-bottom: $p-36;
+	}
 
-  &--not-found {
-    @include not-found;
-  }
+	&--not-found {
+		@include not-found;
+	}
 
-  @media screen and (max-width: 767px) {
-    &-header {
-      > h1 {
-        width: 66%;
-      }
-    }
-  }
+	@media screen and (max-width: 767px) {
+		&-header {
+			> h1 {
+				width: 66%;
+			}
+		}
+	}
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    &-wrapper {
-      padding-left: $p-20;
-      padding-right: $p-20;
-    }
-  }
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+		&-wrapper {
+			padding-left: $p-20;
+			padding-right: $p-20;
+		}
+	}
 
-  @media screen and (min-width: 1024px) {
-    &-wrapper {
-      padding: $p-40 $p-60 $p-80 $p-60;
-    }
+	@media screen and (min-width: 1024px) {
+		&-wrapper {
+			padding: $p-40 $p-60 $p-80 $p-60;
+		}
 
-    &-header {
-      margin-bottom: $p-54;
-    }
-  }
+		&-header {
+			margin-bottom: $p-54;
+		}
+	}
 }

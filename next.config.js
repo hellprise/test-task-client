@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	env:{
-		API_URL: process.env.NEXT_PUBLIC_API_URL,
+	env: {
+		API_URL: process.env.NEXT_PUBLIC_API_URL
 	},
 	images: {
-		domains: ['res.cloudinary.com'],
+		domains: ['res.cloudinary.com']
 	},
 	webpack(config) {
 		// config.module.rules.push({
@@ -16,11 +16,11 @@ const nextConfig = {
 		config.module.rules.push({
 			test: /\.(graphql|gql)/,
 			exclude: /node_modules/,
-			loader: 'graphql-tag/loader',
+			loader: 'graphql-tag/loader'
 		})
 
 		return config
-	},
+	}
 }
 
 module.exports = nextConfig

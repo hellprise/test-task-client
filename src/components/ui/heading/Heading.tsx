@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { FC } from 'react'
-import { IHeadingProps } from './heading.interface'
 
+import { IHeadingProps } from './Heading.interface'
 import './heading.scss'
 
 export const Heading: FC<IHeadingProps> = ({ children, className, align = 'left', ...props }) => {
@@ -9,7 +9,7 @@ export const Heading: FC<IHeadingProps> = ({ children, className, align = 'left'
 		<h1
 			className={clsx('heading', className, {
 				'heading--left': align === 'left',
-				'heading--center': align === 'center',
+				'heading--center': align === 'center'
 			})}
 			{...props}
 		>

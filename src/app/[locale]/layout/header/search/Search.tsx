@@ -1,17 +1,22 @@
-import { ChangeEvent, FC, useEffect, useState } from 'react'
-
-import { Button } from '@/components/ui/button/button.component'
-import { Icon } from '@/components/ui/icon/icon.component'
-import { Loader } from '@/components/ui/loader/Loader'
-import GET_PRODUCTS_BY_SEARCH from '@/graphql/queries/getProductsBySearch.graphql'
-import { useLocale } from '@/hooks/useLocale'
-import { useOutside } from '@/hooks/useOutside'
-import { IProduct, ProductsResponse } from '@/types/products.interface'
-import { convertPrice } from '@/utils/convert-price'
 import { useLazyQuery } from '@apollo/client'
 import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ChangeEvent, FC, useEffect, useState } from 'react'
+
+import { Button } from '@/components/ui/button/Button'
+import { Icon } from '@/components/ui/icon/Icon'
+import { Loader } from '@/components/ui/loader/Loader'
+
+import { useLocale } from '@/hooks/useLocale'
+import { useOutside } from '@/hooks/useOutside'
+
+import GET_PRODUCTS_BY_SEARCH from '@/graphql/queries/getProductsBySearch.graphql'
+
+import { IProduct, ProductsResponse } from '@/types/products.interface'
+
+import { convertPrice } from '@/utils/convert-price'
+
 import '../header.scss'
 
 export const Search: FC<{ className?: string }> = ({ className }) => {
@@ -82,7 +87,7 @@ export const Search: FC<{ className?: string }> = ({ className }) => {
 
 				<section
 					className={clsx('search-dropdown', {
-						'search-dropdown--opened': searchTerm.length > 0 && isShow,
+						'search-dropdown--opened': searchTerm.length > 0 && isShow
 					})}
 					role='dialog'
 				>

@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 
-import { IconName } from '../icon/icon.interface'
+import { IconName } from '../icon/Icon.interface'
 
 type ButtonVariant = 'blur' | 'dark' | 'transparent'
 

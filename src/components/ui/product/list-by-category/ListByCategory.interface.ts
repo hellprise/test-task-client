@@ -1,5 +1,4 @@
-
 export interface IListByCategoryProps {
-  category: string
-  title: string
+	category: string
+	title: string
 }

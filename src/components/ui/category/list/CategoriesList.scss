@@ -1,0 +1,55 @@
+@import '@/app/[locale]/styles';
+
+.categories-list {
+	overflow-x: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	> div {
+		@include flex-alignment(center, flex-start, $gap-16);
+
+		margin-top: $p-24;
+		margin-bottom: $p-48;
+		min-width: max-content;
+
+		@media screen and (min-width: 1440px) {
+			padding: 0px $p-24;
+		}
+	}
+
+	&__item {
+		padding: $p-10 $p-16;
+
+		color: $dark;
+		font-weight: $font-medium;
+		letter-spacing: 0.03rem;
+		cursor: pointer;
+		background: transparent;
+
+		border-radius: $rounded-xxl;
+		border: 1px solid $gray;
+		box-shadow: $shadow-link;
+		transition:
+			transform 0.3s,
+			color 0.5s;
+
+		&--active {
+			color: $light-gray;
+			background: linear-gradient(to right, $gray 1%, black);
+		}
+
+		&:hover {
+			transform: scale(1.03) rotate(5deg);
+		}
+
+		@media screen and (min-width: 768px) {
+			padding: $p-16 $p-24;
+		}
+	}
+
+	&--not-found {
+		@include not-found;
+	}
+}

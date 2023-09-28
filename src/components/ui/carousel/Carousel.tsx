@@ -1,20 +1,22 @@
 'use client'
 
+import { useQuery } from '@apollo/client'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Mark } from '../mark/mark.component'
-
-import { useQuery } from '@apollo/client'
-
-import GET_CAROUSEL from '@/graphql/queries/getCarousel.graphql'
 
 import { useActions } from '@/hooks/useActions'
 import { useCarousel } from '@/hooks/useCarousel'
 import { useLocale } from '@/hooks/useLocale'
+
+import GET_CAROUSEL from '@/graphql/queries/getCarousel.graphql'
+
 import { CarouselResponse } from '@/types/carousel.interface'
-import { useTranslations } from 'next-intl'
+
 import { Loader } from '../loader/Loader'
+import { Mark } from '../mark/Mark'
+
 import './carousel.scss'
 
 export const MovieCarousel = () => {
@@ -26,8 +28,8 @@ export const MovieCarousel = () => {
 
 	const { data, loading, error } = useQuery<CarouselResponse>(GET_CAROUSEL, {
 		variables: {
-			locale,
-		},
+			locale
+		}
 	})
 
 	const t = useTranslations('carousel')
@@ -54,7 +56,7 @@ export const MovieCarousel = () => {
 						role='button'
 						onClick={() => toggleActiveSlide(index + 1)}
 						className={clsx('carousel-item', {
-							'carousel-item--active': index + 1 === currentIndex,
+							'carousel-item--active': index + 1 === currentIndex
 						})}
 					>
 						<Mark

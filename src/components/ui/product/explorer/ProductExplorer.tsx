@@ -1,22 +1,24 @@
 'use client'
 
 // import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-import { CategoriesList } from '../../category/list/categories-list.component'
-import { Catalog } from '../catalog/catalog.component'
-
-import { Heading } from '../../heading/heading.component'
-
-import GET_PRODUCTS from '@/graphql/queries/getProducts.graphql'
+import { CategoriesList } from '@/components/ui/category/list/CategoriesList'
 
 import { useCategory } from '@/hooks/useCategory'
 import { useLocale } from '@/hooks/useLocale'
+
+import GET_PRODUCTS from '@/graphql/queries/getProducts.graphql'
+
 import { ProductsResponse } from '@/types/products.interface'
-import { useQuery } from '@apollo/client'
-import { useTranslations } from 'next-intl'
+
+import { Heading } from '../../heading/Heading'
 import { Loader } from '../../loader/Loader'
-import './product-explorer.scss'
+import { Catalog } from '../catalog/Catalog'
+
+import './ProductExplorer.scss'
 
 export const ProductExplorer = () => {
 	const { locale } = useLocale()
@@ -26,8 +28,8 @@ export const ProductExplorer = () => {
 	const { loading, error, data } = useQuery<ProductsResponse>(GET_PRODUCTS, {
 		variables: {
 			category: currentCategory,
-			locale,
-		},
+			locale
+		}
 	})
 
 	const t = useTranslations('explorer')
@@ -40,7 +42,7 @@ export const ProductExplorer = () => {
 		<section className='explorer-wrapper'>
 			<Image src='/images/background-element.png' fill alt='background catalog element' />
 
-			<Heading dangerouslySetInnerHTML={{__html: t.raw('title')}} align='center' />
+			<Heading dangerouslySetInnerHTML={{ __html: t.raw('title') }} align='center' />
 
 			<CategoriesList />
 

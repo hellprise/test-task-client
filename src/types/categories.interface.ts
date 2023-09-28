@@ -1,18 +1,18 @@
 export interface CategoriesResponse {
-  categories: Categories;
+	categories: Categories
 }
 
 interface Categories {
-  data: ICategory[];
+	data: ICategory[]
 }
 
 export interface ICategory {
-  id: string;
-  attributes: Attributes;
+	id: string
+	attributes: Attributes
 }
 
 interface Attributes {
-  __typename: string;
-  name: string;
-  slug: string;
+	__typename: string
+	name: string
+	slug: string
 }

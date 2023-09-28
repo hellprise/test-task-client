@@ -1,11 +1,11 @@
 query getCategories($locale: I18NLocaleCode) {
-  categories(sort: "id:asc", locale: $locale) {
-    data {
-      id
-      attributes {
-        name
-        slug
-      }
-    }
-  }
+	categories(sort: "id:asc", locale: $locale) {
+		data {
+			id
+			attributes {
+				name
+				slug
+			}
+		}
+	}
 }

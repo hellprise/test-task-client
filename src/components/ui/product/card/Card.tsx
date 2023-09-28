@@ -1,16 +1,17 @@
 'use client'
 
+import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-
-import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
+
+import { IProduct } from '@/types/products.interface'
 
 import { convertPrice } from '@/utils/convert-price'
 
-import { IProduct } from '@/types/products.interface'
-import { useTranslations } from 'next-intl'
-import { Mark } from '../../mark/mark.component'
+import { Mark } from '../../mark/Mark'
+
 import './card.scss'
 
 export const ProductCard = ({ item }: { item: IProduct }) => {
@@ -18,7 +19,7 @@ export const ProductCard = ({ item }: { item: IProduct }) => {
 
 	const cardRef = useRef<HTMLDivElement>(null)
 
-	const t = useTranslations('sectionByCategory');
+	const t = useTranslations('sectionByCategory')
 
 	useEffect(() => {
 		const checkVisibility = () => {
@@ -40,7 +41,7 @@ export const ProductCard = ({ item }: { item: IProduct }) => {
 	return (
 		<div
 			className={clsx('catalog-card', {
-				'catalog-card--visible': isVisible,
+				'catalog-card--visible': isVisible
 			})}
 			key={item.id}
 			ref={cardRef}

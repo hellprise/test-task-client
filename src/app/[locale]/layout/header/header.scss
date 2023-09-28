@@ -1,188 +1,188 @@
-@import "@/app/[locale]/styles";
+@import '@/app/[locale]/styles';
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 
-  &-content {
-    display: none;
-  }
+	&-content {
+		display: none;
+	}
 
-  &__logo {
-    animation: LogoScale 1.1s ease-in-out;
-  }
+	&__logo {
+		animation: LogoScale 1.1s ease-in-out;
+	}
 
-  &__right-col {
-    @include flex-direction;
+	&__right-col {
+		@include flex-direction;
 
-    row-gap: $gap-16;
-    margin-top: $p-24;
+		row-gap: $gap-16;
+		margin-top: $p-24;
 
-    > .search-wrapper {
-      position: relative;
-      display: flex;
-      width: $w-3-4;
+		> .search-wrapper {
+			position: relative;
+			display: flex;
+			width: $w-3-4;
 
-      &::before {
-        content: "";
-        position: absolute;
-        inset: -1px;
-        border-radius: $rounded-l;
-        padding: $p-px;
-        background: linear-gradient(to left top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
-        -webkit-mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        mask:
-          linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        pointer-events: none;
-      }
+			&::before {
+				content: '';
+				position: absolute;
+				inset: -1px;
+				border-radius: $rounded-l;
+				padding: $p-px;
+				background: linear-gradient(to left top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+				-webkit-mask:
+					linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				mask:
+					linear-gradient(#fff 0 0) content-box,
+					linear-gradient(#fff 0 0);
+				-webkit-mask-composite: xor;
+				mask-composite: exclude;
+				pointer-events: none;
+			}
 
-      > input {
-        width: $w-full;
-        padding: $p-14 $p-16;
-        padding-left: $p-50;
-        border-radius: $rounded-l;
-        border: none;
-        outline: none;
-        border: 1px solid $gray;
-        backdrop-filter: blur(8px);
-        overflow: hidden;
-        color: $dark;
-        font-size: $text-s;
-        // transition: transform 0.3s;
-        transition: $animate-bg;
+			> input {
+				width: $w-full;
+				padding: $p-14 $p-16;
+				padding-left: $p-50;
+				border-radius: $rounded-l;
+				border: none;
+				outline: none;
+				border: 1px solid $gray;
+				backdrop-filter: blur(8px);
+				overflow: hidden;
+				color: $dark;
+				font-size: $text-s;
+				// transition: transform 0.3s;
+				transition: $animate-bg;
 
-        &::placeholder {
-          color: $dark;
-        }
+				&::placeholder {
+					color: $dark;
+				}
 
-        &:focus {
-          background-color: rgba(255, 255, 255, 0.6);
-          // transform: scale(1.02);
-        }
-      }
+				&:focus {
+					background-color: rgba(255, 255, 255, 0.6);
+					// transform: scale(1.02);
+				}
+			}
 
-      > svg {
-        position: absolute;
-        left: 16px;
-        top: 12px;
-      }
-    }
-  }
+			> svg {
+				position: absolute;
+				left: 16px;
+				top: 12px;
+			}
+		}
+	}
 
-  @media screen and (max-width: 1023px) {
-    @include flex-alignment(flex-end, center);
+	@media screen and (max-width: 1023px) {
+		@include flex-alignment(flex-end, center);
 
-    padding: $p-24 $p-12;
-  }
+		padding: $p-24 $p-12;
+	}
 
-  @media screen and (min-width: 1024px) {
-    &-content {
-      display: grid;
-      align-items: center;
-      grid-template-columns: 1fr 48px 1fr;
-      grid-template-areas: "menu logo search";
-      column-gap: $gap-24;
-      padding: $p-40 $p-60;
-    }
+	@media screen and (min-width: 1024px) {
+		&-content {
+			display: grid;
+			align-items: center;
+			grid-template-columns: 1fr 48px 1fr;
+			grid-template-areas: 'menu logo search';
+			column-gap: $gap-24;
+			padding: $p-40 $p-60;
+		}
 
-    &__right-col {
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      column-gap: $gap-24;
-      margin-top: 0;
-      margin-right: $p-24;
+		&__right-col {
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+			column-gap: $gap-24;
+			margin-top: 0;
+			margin-right: $p-24;
 
-      > .search-wrapper {
-        position: relative;
-        width: $w-7-12;
+			> .search-wrapper {
+				position: relative;
+				width: $w-7-12;
 
-        > input {
-          border: none;
-          background: $white-transparent;
-        }
-      }
-    }
-  }
+				> input {
+					border: none;
+					background: $white-transparent;
+				}
+			}
+		}
+	}
 }
 
 .search-dropdown {
-  position: absolute;
-  width: $w-3-4;
-  top: 54px;
-  left: 0;
-  width: max-content;
-  border-radius: $rounded-l;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: $p-16;
-  z-index: 1;
-  transform: scale(0);
-  transform-origin: top left;
-  transition: $animate-transform;
+	position: absolute;
+	width: $w-3-4;
+	top: 54px;
+	left: 0;
+	width: max-content;
+	border-radius: $rounded-l;
+	background: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: $p-16;
+	z-index: 1;
+	transform: scale(0);
+	transform-origin: top left;
+	transition: $animate-transform;
 
-  > section {
-    @include flex-direction;
+	> section {
+		@include flex-direction;
 
-    gap: $gap-16;
+		gap: $gap-16;
 
-    a {
-      @include flex-items;
+		a {
+			@include flex-items;
 
-      gap: $gap-12;
-      padding: $p-8;
-      border-radius: $rounded-m;
-      transition: $animate-border;
-      border: 1px solid transparent;
+			gap: $gap-12;
+			padding: $p-8;
+			border-radius: $rounded-m;
+			transition: $animate-border;
+			border: 1px solid transparent;
 
-      &:hover {
-        border: 1px solid $gray;
-      }
+			&:hover {
+				border: 1px solid $gray;
+			}
 
-      > img {
-        border-radius: $rounded-m;
-      }
+			> img {
+				border-radius: $rounded-m;
+			}
 
-      > h3 {
-        font-weight: $font-medium;
-      }
+			> h3 {
+				font-weight: $font-medium;
+			}
 
-      > p {
-        font-size: $text-xs;
-      }
-    }
-  }
+			> p {
+				font-size: $text-xs;
+			}
+		}
+	}
 
-  &--not-found {
-    @include not-found;
-  }
+	&--not-found {
+		@include not-found;
+	}
 
-  &--opened {
-    transform: scale(1);
-  }
+	&--opened {
+		transform: scale(1);
+	}
 }
 
 @keyframes LogoScale {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.3);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.3);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

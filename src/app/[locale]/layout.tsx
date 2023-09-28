@@ -4,15 +4,16 @@ import { Roboto } from 'next/font/google'
 import { notFound } from 'next/navigation'
 
 import { MainProvider } from '@/providers/MainProvider'
+
 // import { Locale, i18n } from '../../../i18n-config'
-import { Footer } from './layout/footer/footer.component'
-import { Header } from './layout/header/header.component'
+import { Footer } from './layout/footer/Footer'
+import { Header } from './layout/header/Header'
 import './styles/globals.scss'
 
 const roboto = Roboto({
 	weight: ['400', '500', '700'],
 	subsets: ['latin-ext'],
-	display: 'swap',
+	display: 'swap'
 })
 
 // export async function generateStaticParams() {
@@ -24,12 +25,12 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
 	title: 'Test task',
-	description: 'Test task for the Frontend Developer position',
+	description: 'Test task for the Frontend Developer position'
 }
 
 export default async function RootLayout({
 	children,
-	params: { locale },
+	params: { locale }
 }: {
 	children: React.ReactNode
 	params: { locale: string }

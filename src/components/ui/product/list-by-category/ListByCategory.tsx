@@ -1,19 +1,23 @@
 'use client'
 
-import GET_PRODUCTS from '@/graphql/queries/getProducts.graphql'
-import { ProductsResponse } from '@/types/products.interface'
 import { useQuery } from '@apollo/client'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { Button } from '../../button/button.component'
-import { Heading } from '../../heading/heading.component'
-import { Loader } from '../../loader/Loader'
-import { Catalog } from '../catalog/catalog.component'
-import { IListByCategoryProps } from './ListByCategory.interface'
 
 import { useLocale } from '@/hooks/useLocale'
-import { useTranslations } from 'next-intl'
+
+import GET_PRODUCTS from '@/graphql/queries/getProducts.graphql'
+
+import { ProductsResponse } from '@/types/products.interface'
+
+import { Button } from '../../button/Button'
+import { Heading } from '../../heading/Heading'
+import { Loader } from '../../loader/Loader'
+import { Catalog } from '../catalog/Catalog'
+
+import { IListByCategoryProps } from './ListByCategory.interface'
 import './ListByCategory.scss'
 
 export const ListByCategory: FC<IListByCategoryProps> = ({ category, title }) => {
@@ -22,12 +26,11 @@ export const ListByCategory: FC<IListByCategoryProps> = ({ category, title }) =>
 	const { data, loading, error } = useQuery<ProductsResponse>(GET_PRODUCTS, {
 		variables: {
 			category: category,
-			locale,
-		},
+			locale
+		}
 	})
 
-
-	const t = useTranslations('sectionByCategory');
+	const t = useTranslations('sectionByCategory')
 
 	if (loading) return <Loader />
 

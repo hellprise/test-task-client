@@ -1,10 +1,14 @@
 'use client'
 
-import GET_BOTTOM_LINKS from '@/graphql/queries/getBottomLinks.graphql'
-import { useLocale } from '@/hooks/useLocale'
 import { useQuery } from '@apollo/client'
 import Link from 'next/link'
+
+import { useLocale } from '@/hooks/useLocale'
+
+import GET_BOTTOM_LINKS from '@/graphql/queries/getBottomLinks.graphql'
+
 import { Loader } from '../loader/Loader'
+
 import './BottomList.scss'
 
 export const BottomList = () => {
@@ -12,8 +16,8 @@ export const BottomList = () => {
 
 	const { data, loading, error } = useQuery<BottomListResponse>(GET_BOTTOM_LINKS, {
 		variables: {
-			locale,
-		},
+			locale
+		}
 	})
 
 	if (loading) return <Loader />

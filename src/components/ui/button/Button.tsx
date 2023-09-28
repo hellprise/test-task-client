@@ -1,10 +1,9 @@
 import clsx from 'clsx'
 import { FC } from 'react'
 
-import { IButtonProps } from './button.interface'
+import { Icon } from '../icon/Icon'
 
-import { Icon } from '../icon/icon.component'
-
+import { IButtonProps } from './Button.interface'
 import './button.scss'
 
 export const Button: FC<IButtonProps> = ({ children, className, icon, onClick, variant = 'transparent', ...props }) => {
@@ -15,7 +14,7 @@ export const Button: FC<IButtonProps> = ({ children, className, icon, onClick, v
 				'button--blur': variant === 'blur',
 				'button--dark': variant === 'dark',
 				'button--transparent': variant === 'transparent',
-				'button--has-icon': icon,
+				'button--has-icon': icon
 			})}
 			{...props}
 		>

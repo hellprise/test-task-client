@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { IIconProps } from './icon.interface'
+import { IIconProps } from './Icon.interface'
 
 export const Icon: FC<IIconProps> = ({ icon, className, ...props }) => {
 	switch (icon) {

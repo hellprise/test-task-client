@@ -1,8 +1,9 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+
 import { ICategoryInitialState, INITIAL_CATEGORY } from './category.types'
 
 const initialState: ICategoryInitialState = {
-	category: INITIAL_CATEGORY,
+	category: INITIAL_CATEGORY
 }
 
 export const favoritesSlice = createSlice({
@@ -11,8 +12,8 @@ export const favoritesSlice = createSlice({
 	reducers: {
 		toggleCategory: (state, { payload: category }: PayloadAction<string>) => {
 			state.category = category
-		},
-	},
+		}
+	}
 })
 
 export const { actions, reducer } = favoritesSlice

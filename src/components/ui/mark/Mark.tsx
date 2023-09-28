@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 
-import { Button } from '../button/button.component'
-import { IconName } from '../icon/icon.interface'
+import { Button } from '../button/Button'
+import { IconName } from '../icon/Icon.interface'
 
 import './mark.scss'
 

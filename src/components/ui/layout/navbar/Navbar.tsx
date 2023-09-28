@@ -1,14 +1,17 @@
 'use client'
 
-import { Icon } from '@/components/ui/icon/icon.component'
-import { useOutside } from '@/hooks/useOutside'
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { FC } from 'react'
+
+import { Icon } from '@/components/ui/icon/Icon'
+
+import { useOutside } from '@/hooks/useOutside'
 
 import { getNavbarData } from '@/data/layout.data'
-import { useTranslations } from 'next-intl'
-import { FC } from 'react'
+
 import { INavbarProps } from './Navbar.interface'
 import './Navbar.scss'
 
@@ -30,7 +33,7 @@ export const Navbar: FC<INavbarProps> = ({ className }) => {
 					return (
 						<li
 							className={clsx('navbar__item', {
-								'navbar__item--active': link.slug === pathname,
+								'navbar__item--active': link.slug === pathname
 							})}
 							key={link.id}
 						>
@@ -42,7 +45,7 @@ export const Navbar: FC<INavbarProps> = ({ className }) => {
 
 									<Icon
 										className={clsx('navbar__chevron', {
-											'navbar__chevron--active': isShow,
+											'navbar__chevron--active': isShow
 										})}
 										icon='chevron-down'
 									/>
@@ -52,7 +55,7 @@ export const Navbar: FC<INavbarProps> = ({ className }) => {
 							{link.submenu && (
 								<ul
 									className={clsx('navbar__submenu', {
-										'navbar__submenu--opened': isShow,
+										'navbar__submenu--opened': isShow
 									})}
 								>
 									{link.submenu.map((sublink: any) => {

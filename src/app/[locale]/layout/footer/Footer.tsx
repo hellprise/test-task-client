@@ -1,11 +1,12 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+
+import { getFooterData } from '@/data/layout.data'
 
 import { formatExternalLink } from '@/utils/format-external-link'
 
-import { getFooterData } from '@/data/layout.data'
-import { useTranslations } from 'next-intl'
 import './footer.scss'
 import { LanguageSelector } from './language-selector/LanguageSelector'
 

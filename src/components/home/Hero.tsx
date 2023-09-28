@@ -1,16 +1,17 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+
+import { Button } from '@/components/ui/button/Button'
 
 import { replaceString } from '@/utils/replace-string'
 
-import { Button } from '@/components/ui/button/button.component'
-import { useTranslations } from 'next-intl'
 import './hero.scss'
 
 export const Hero = () => {
 	// const dict = await getDictionary(locale)
-	const t = useTranslations('hero');
+	const t = useTranslations('hero')
 
 	return (
 		<section className='hero'>
@@ -27,9 +28,7 @@ export const Hero = () => {
 					<Image src='/images/hero-text-bottom.png' alt='hero text element #2' width={169} height={75} />
 				</section>
 
-				<p>
-					{t('subtitle')}
-				</p>
+				<p>{t('subtitle')}</p>
 
 				<Button className='hero__button' variant='dark'>
 					{t('button')}

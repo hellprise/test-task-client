@@ -1,37 +1,37 @@
-@import "@/app/[locale]/styles";
+@import '@/app/[locale]/styles';
 
 .mobile-menu {
-  display: none;
+	display: none;
 
-  &--opened {
-    @include flex-direction;
+	&--opened {
+		@include flex-direction;
 
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+		position: absolute;
+		inset: 0;
+		z-index: 1;
 
-    height: $h-screen;
-    padding: $p-12;
-    background: white;
-  }
+		height: $h-screen;
+		padding: $p-12;
+		background: white;
+	}
 
-  &__head {
-    @include flex-alignment(space-between, center);
+	&__head {
+		@include flex-alignment(space-between, center);
 
-    margin-bottom: $p-32;
-  }
+		margin-bottom: $p-32;
+	}
 
-  @media screen and (min-width: 1024px) {
-    display: none;
+	@media screen and (min-width: 1024px) {
+		display: none;
 
-    &__icon {
-      display: none;
-    }
-  }
+		&__icon {
+			display: none;
+		}
+	}
 }
 
 .mobile-search {
-  > .search-wrapper {
-    max-width: 280px;
-  }
+	> .search-wrapper {
+		max-width: 280px;
+	}
 }

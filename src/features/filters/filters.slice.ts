@@ -5,8 +5,8 @@ import { IFiltersActionsPayload, IFiltersInitialState } from './filters.types'
 const initialState: IFiltersInitialState = {
 	isFilterUpdated: false,
 	queryParams: {
-		searchTerm: '',
-	},
+		searchTerm: ''
+	}
 }
 
 export const filtersSlice = createSlice({
@@ -21,6 +21,6 @@ export const filtersSlice = createSlice({
 		},
 		resetFilterUpdate: state => {
 			state.isFilterUpdated = false
-		},
-	},
+		}
+	}
 })

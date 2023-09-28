@@ -1,11 +1,13 @@
 import clsx from 'clsx'
-
-import { useOutside } from '@/hooks/useOutside'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Icon } from '../icon/icon.component'
+
+import { useOutside } from '@/hooks/useOutside'
+
+import { Icon } from '../icon/Icon'
+
+import { ISelect, ISelectItem } from './Select.interface'
 import './Select.scss'
-import { ISelect, ISelectItem } from './select.interface'
 
 export function Select({ data, value, setValue, onChange }: ISelect) {
 	const { isShow, ref, setIsShow } = useOutside(false)
@@ -40,14 +42,14 @@ export function Select({ data, value, setValue, onChange }: ISelect) {
 
 				<Icon
 					className={clsx('select__icon', {
-						'select__icon--active': isShow,
+						'select__icon--active': isShow
 					})}
 				/>
 			</button>
 
 			<ul
 				className={clsx('select__options', {
-					'select__options--active': isShow,
+					'select__options--active': isShow
 				})}
 			>
 				{data.map(item => (
@@ -55,7 +57,7 @@ export function Select({ data, value, setValue, onChange }: ISelect) {
 						onClick={() => toggleSelectItem(item)}
 						key={item.key?.toString()}
 						className={clsx('select__item', {
-							'select__item--active': item.key === value?.key,
+							'select__item--active': item.key === value?.key
 						})}
 					>
 						<Link href={redirectedPathName(item.key)}>{item.label}</Link>

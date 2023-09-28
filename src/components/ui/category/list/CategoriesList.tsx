@@ -1,18 +1,23 @@
-import GET_CATEGORIES from '@/graphql/queries/getCategories.graphql'
-import { useLocale } from '@/hooks/useLocale'
-import { CategoriesResponse } from '@/types/categories.interface'
 import { useQuery } from '@apollo/client'
+
+import { useLocale } from '@/hooks/useLocale'
+
+import GET_CATEGORIES from '@/graphql/queries/getCategories.graphql'
+
+import { CategoriesResponse } from '@/types/categories.interface'
+
 import { Loader } from '../../loader/Loader'
-import { Category } from '../category/category.component'
-import './categories-list.scss'
+import { Category } from '../category/Category'
+
+import './CategoriesList.scss'
 
 export const CategoriesList = () => {
 	const { locale } = useLocale()
 
 	const { loading, error, data } = useQuery<CategoriesResponse>(GET_CATEGORIES, {
 		variables: {
-			locale,
-		},
+			locale
+		}
 	})
 
 	const categories = data?.categories.data

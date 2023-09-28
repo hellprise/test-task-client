@@ -1,13 +1,15 @@
 // import { ICategory } from './category.interface'
+import clsx from 'clsx'
 
 import { useActions } from '@/hooks/useActions'
 import { useCategory } from '@/hooks/useCategory'
+
 import { ICategory } from '@/types/categories.interface'
-import clsx from 'clsx'
-import '../list/categories-list.scss'
+
+import '../list/CategoriesList.scss'
 
 export const Category = ({ category }: { category: ICategory }) => {
-	const {currentCategory} = useCategory()
+	const { currentCategory } = useCategory()
 
 	// TODO: sort in redux by category slug
 	const { toggleCategory } = useActions()
@@ -17,7 +19,7 @@ export const Category = ({ category }: { category: ICategory }) => {
 			role='button'
 			onClick={() => toggleCategory(category.attributes.slug)}
 			className={clsx('categories-list__item', {
-				'categories-list__item--active': category.attributes.slug === currentCategory,
+				'categories-list__item--active': category.attributes.slug === currentCategory
 			})}
 			key={category.id}
 		>

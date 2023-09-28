@@ -1,36 +1,39 @@
 {
-  "name": "test-task",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@apollo/client": "^3.8.4",
-    "@formatjs/intl-localematcher": "^0.4.2",
-    "@reduxjs/toolkit": "^1.9.6",
-    "@types/node": "20.6.4",
-    "@types/react": "18.2.22",
-    "@types/react-dom": "18.2.7",
-    "graphql": "^16.8.1",
-    "graphql-tag": "^2.12.6",
-    "negotiator": "^0.6.3",
-    "next": "13.5.2",
-    "next-intl": "^2.20.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-redux": "^8.1.2",
-    "server-only": "^0.0.1",
-    "typescript": "5.2.2"
-  },
-  "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "@types/graphql": "^14.5.0",
-    "@types/negotiator": "^0.6.1",
-    "clsx": "^2.0.0",
-    "sass": "^1.68.0"
-  }
+	"name": "test-task",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"@apollo/client": "^3.8.4",
+		"@formatjs/intl-localematcher": "^0.4.2",
+		"@reduxjs/toolkit": "^1.9.6",
+		"@types/node": "20.6.4",
+		"@types/react": "18.2.22",
+		"@types/react-dom": "18.2.7",
+		"graphql": "^16.8.1",
+		"graphql-tag": "^2.12.6",
+		"negotiator": "^0.6.3",
+		"next": "13.5.2",
+		"next-intl": "^2.20.2",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-redux": "^8.1.2",
+		"server-only": "^0.0.1",
+		"typescript": "5.2.2"
+	},
+	"devDependencies": {
+		"@svgr/webpack": "^8.1.0",
+		"@trivago/prettier-plugin-sort-imports": "^4.2.0",
+		"@types/graphql": "^14.5.0",
+		"@types/negotiator": "^0.6.1",
+		"clsx": "^2.0.0",
+		"prettier": "^3.0.3",
+		"sass": "^1.68.0"
+	}
 }

@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 
-import { Navbar } from '../../../../components/ui/layout/navbar/Navbar'
+import { Navbar } from '@/components/ui/layout/navbar/Navbar'
+
 import './header.scss'
 import { MobileMenu } from './mobile/MobileMenu'
 import { Search } from './search/Search'

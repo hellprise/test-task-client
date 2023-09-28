@@ -1,6 +1,8 @@
-import { TypeProductDataFilters } from '@/features/filters/filters.types'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
+
+import { TypeProductDataFilters } from '@/features/filters/filters.types'
+
 import { useActions } from './useActions'
 import { useTypedSelector } from './useTypedSelector'
 

@@ -1,11 +1,13 @@
-import { Icon } from '@/components/ui/icon/icon.component'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { Navbar } from '../../../../../components/ui/layout/navbar/Navbar'
+
+import { Icon } from '@/components/ui/icon/Icon'
+import { Navbar } from '@/components/ui/layout/navbar/Navbar'
 
 import '../header.scss'
 import { Search } from '../search/Search'
+
 import './MobileMenu.scss'
 
 export const MobileMenu = () => {
@@ -32,7 +34,7 @@ export const MobileMenu = () => {
 
 				<section
 					className={clsx('mobile-menu', {
-						'mobile-menu--opened': isShow,
+						'mobile-menu--opened': isShow
 					})}
 				>
 					<div className='mobile-menu__head'>
@@ -43,7 +45,7 @@ export const MobileMenu = () => {
 
 					<Navbar className='mobile-menu__nav' />
 
-						<Search className="mobile-search" />
+					<Search className='mobile-search' />
 				</section>
 			</>
 		)
